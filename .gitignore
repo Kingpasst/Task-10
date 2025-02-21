@@ -1,0 +1,57 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+
+# Virtual environment
+venv/
+env/
+env.bak/
+.venv/
+.Python
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Configuration files
+*.env
+*.local
+*.secret
+*.json
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+.pytype/
+
+# pytest
+.cache
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
