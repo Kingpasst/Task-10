@@ -1,4 +1,3 @@
-```markdown
 # NeedWeed
 
 NeedWeed is a Web Store App that allows users to create and participate in polls. The application includes user authentication features, enabling users to register, log in, and manage their profiles.
