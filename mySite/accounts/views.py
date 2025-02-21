@@ -7,10 +7,31 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 def home(request):
+    """
+    Render the home page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template for the home page.
+    """
     return render(request, 'home.html')
 
 
 def register(request):
+    """
+    Handle user registration.
+
+    If the user is already authenticated, redirect to the home page.
+    If the request is a POST, process the registration form.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template for the registration page.
+    """
     if request.user.is_authenticated:
         return redirect('home')
         
@@ -30,6 +51,18 @@ def register(request):
 
 
 def login_view(request):
+    """
+    Handle user login.
+
+    If the user is already authenticated, redirect to the home page.
+    If the request is a POST, process the login form.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template for the login page.
+    """
     if request.user.is_authenticated:
         return redirect('home')
         
@@ -52,6 +85,15 @@ def login_view(request):
 
 
 def logout_view(request):
+    """
+    Log out the user and redirect to the home page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Redirect to the home page after logging out.
+    """
     logout(request)
     messages.info(request, 'You have been logged out.')
     return redirect('home')
@@ -59,4 +101,13 @@ def logout_view(request):
 
 @login_required
 def profile(request):
+    """
+    Render the user's profile page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template for the user's profile page.
+    """
     return render(request, 'accounts/profile.html')
