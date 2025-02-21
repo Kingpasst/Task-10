@@ -46,12 +46,6 @@ NeedWeed is a Web Store App that allows users to create and participate in polls
      venv\Scripts\activate
      ```
 
-   - On macOS/Linux:
-
-     ```bash
-     source venv/bin/activate
-     ```
-
 4. Install the required packages:
 
    ```bash
